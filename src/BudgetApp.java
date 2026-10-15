@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Collections;
 
 public class BudgetApp {
     public static void main(String[] args) {
@@ -26,6 +27,7 @@ public class BudgetApp {
             //                    " but the actual spend was " + spentString);
         }
         // System.out.println(groceries.toString());
+        Collections.sort(categories);
         System.out.println(categories.toString());
     }
 
@@ -41,6 +43,7 @@ public class BudgetApp {
      * @param categories the budget categories with the spend
      * @return the total amount over/under budget
      */
+  
     public static int budgetDifference(List<BudgetCategory> categories) {
         // TODO: You will implement this method in Wave 4
         // Note that this method SHOULD NOT have a print statement.
