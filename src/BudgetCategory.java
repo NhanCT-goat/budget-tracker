@@ -1,31 +1,31 @@
 public class BudgetCategory {
-    private String name;
-    private int budget;
-    private int spent;
-    public BudgetCategory(String name, int budget, int spent) {
-        this.name = name;
-        this.budget = budget;
+    private String category;
+    private double limit;
+    private double spent;
+    public BudgetCategory(String category, double limit2, double spent2) {
+        this.category = category;
+        this.limit = limit;
         this.spent = spent;
     }
-    public String getName() {
-        return name;
+    public String getCategory() {
+        return category;
     }
-    public int getBudget() {
-        return budget;
+    public double getLimit() {
+        return limit;
     }
-    public int getSpent() {
+    public double getSpent() {
         return spent;
     }
-    public void setName(String name) {
-        this.name = name;
+    public void setCategory(String category) {
+        this.category = category;
     }
-    public void setBudget(int budget) {
-        this.budget = budget;   
+    public void setLimit(double limit) {
+        this.limit = limit;   
     }
-    public void setSpent(int spent) {
+    public void setSpent(double spent) {
         this.spent = spent;
     }
     public String toString() {
-        return "BudgetCategory [name=" + name + ", budget=" + budget + ", spent=" + spent + "]";
+        return "BudgetCategory [name=" + category + ", limit=" + limit   + ", spent=" + spent + "]";
     }
 }
