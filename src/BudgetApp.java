@@ -1,7 +1,7 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Collections;
 
 public class BudgetApp {
     public static void main(String[] args) {
@@ -30,6 +30,8 @@ public class BudgetApp {
         Collections.sort(categories, Collections.reverseOrder());
         System.out.println(categories.toString());
         System.out.println("Total budget difference: $" + budgetDifference(categories));
+
+        System.out.printf("Average budget difference: $%.2f", (double) budgetDifference(categories) / categories.size());
     }
 
     /**
