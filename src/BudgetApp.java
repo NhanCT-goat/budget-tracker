@@ -29,6 +29,7 @@ public class BudgetApp {
         // System.out.println(groceries.toString());
         Collections.sort(categories, Collections.reverseOrder());
         System.out.println(categories.toString());
+        System.out.println("Total budget difference: $" + budgetDifference(categories));
     }
 
     /**
