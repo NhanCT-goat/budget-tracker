@@ -13,8 +13,8 @@ public class BudgetApp {
         while(scan.hasNextLine()) {
             String category = scan.nextLine();
          
-            double limit = scan.nextDouble();
-            double spent = scan.nextDouble();
+            int limit = scan.nextInt();
+            int spent = scan.nextInt();
             BudgetCategory budgetCategory = new BudgetCategory(category, limit, spent);
             categories.add(budgetCategory);
 
@@ -31,7 +31,12 @@ public class BudgetApp {
         System.out.println(categories.toString());
         System.out.println("Total budget difference: $" + budgetDifference(categories));
 
-        System.out.printf("Average budget difference: $%.2f", (double) budgetDifference(categories) / categories.size());
+    if (!categories.isEmpty()) {
+         System.out.printf("Average budget difference: $%.2f%n",
+         ( double )budgetDifference( categories) / categories.size());
+} else {
+    System.out.println("Average budget difference: $0.00");
+}
     }
 
     /**
@@ -51,7 +56,7 @@ public class BudgetApp {
         // TODO: You will implement this method in Wave 4
         // Note that this method SHOULD NOT have a print statement.
         // It should instead return the value.
-        int totalDifference = 0;
+       int totalDifference = 0;
         for (int i = 0; i < categories.size(); i++) {
             BudgetCategory category = categories.get(i);
            totalDifference += (category.getSpent() - category.getLimit());
