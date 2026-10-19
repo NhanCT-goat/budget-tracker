@@ -12,9 +12,11 @@ public class BudgetApp {
         
         while(scan.hasNextLine()) {
             String category = scan.nextLine();
-         
-            int limit = scan.nextInt();
-            int spent = scan.nextInt();
+         System.out.println( category);
+            double limit = scan.nextDouble();
+            System.out.println(limit);
+            double spent = scan.nextDouble();
+            System.out.println(spent);
             BudgetCategory budgetCategory = new BudgetCategory(category, limit, spent);
             categories.add(budgetCategory);
 
