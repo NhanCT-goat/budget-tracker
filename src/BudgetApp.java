@@ -1,12 +1,14 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class BudgetApp {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        // BudgetCategory groceries = new BudgetCategory("Groceries", 500, 401);
+    
+         Scanner scan = new Scanner(System.in);
+       scan.useLocale(Locale.US);
        List<BudgetCategory> categories = new ArrayList<BudgetCategory>();
     
         
